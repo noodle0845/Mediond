@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>리포트 샘플 — Mediond 월간 운영 리포트</title>
+<meta name="description" content="노출·클릭이 아닌 매출 기여 흐름을 보여주는 Mediond의 월간 운영 리포트 샘플입니다. 성과 · 병목 · 개선 · 다음 액션을 한 페이지로." />
+<link rel="icon" type="image/png" href="웹로고1.png" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Mediond 홈으로">
+      <img class="brand__logo" src="웹로고-가로.png" alt="Mediond 메디온드" />
+    </a>
+    <nav class="nav__menu">
+      <a href="index.html">홈</a>
+      <a href="service.html">서비스</a>
+      <a href="about.html">회사 소개</a>
+      <a href="report.html" class="is-active">리포트 샘플</a>
+      <a href="contact.html">문의</a>
+    </nav>
+    <a href="contact.html" class="nav__cta">매출 구조 진단 신청 →</a>
+    <button class="nav__toggle" aria-label="메뉴 열기">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+        <line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" style="padding:80px 0 72px;">
+  <div class="container hero__inner">
+    <span class="hero__chip"><span class="dot"></span> MONTHLY OPERATING REPORT</span>
+    <h1>광고 보고서가 아니라,<br/>경영 의사결정을 위한 리포트.</h1>
+    <p class="hero__lead">
+      성과 · 병목 · 개선 · 다음 액션을 한 페이지로.
+      Mediond의 실제 월간 운영 리포트 샘플입니다.
+    </p>
+  </div>
+</section>
+
+<!-- ==================== REPORT SHELL ==================== -->
+<section style="padding-top:0; padding-bottom:80px;">
+  <div class="container">
+    <div class="report-shell reveal">
+      <!-- Header -->
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; padding-bottom:24px; border-bottom: 1px solid var(--line);">
+        <div>
+          <div style="font-family:var(--font-mono); font-size:11px; color:var(--grey-500); letter-spacing:.16em;">SAMPLE • 익명 처리된 실제 운영 사례</div>
+          <h2 style="margin-top:8px;">A 피부과 — 2026년 04월 매출 구조 리포트</h2>
+          <div class="meta">강남권 / 1인 개원 / 운영 6개월 차 · 보고일 2026.05.02</div>
+        </div>
+        <div style="display:flex; gap:8px;">
+          <span class="tag" style="background:var(--ink); color:#fff;">매출 ↑ 24.6%</span>
+          <span class="tag">병목 1건 해소</span>
+        </div>
+      </div>
+
+      <!-- KPI grid -->
+      <div class="dash__grid" style="margin-top: 28px;">
+        <div class="kpi"><div class="kpi__l">월 매출</div><div class="kpi__n">+24.6%</div><div class="kpi__d">전월 대비</div></div>
+        <div class="kpi"><div class="kpi__l">신환</div><div class="kpi__n">142명</div><div class="kpi__d">+18명</div></div>
+        <div class="kpi"><div class="kpi__l">상담 전환률</div><div class="kpi__n">38%</div><div class="kpi__d">+6.2%p</div></div>
+        <div class="kpi"><div class="kpi__l">재방문률</div><div class="kpi__n">41%</div><div class="kpi__d is-down">-2.1%p</div></div>
+      </div>
+
+      <!-- Body -->
+      <div class="report-grid">
+        <!-- Left: chart + funnel -->
+        <div style="display:grid; gap:14px;">
+
+          <!-- Trend chart -->
+          <div class="panel">
+            <h3>매출 추이 — 최근 6개월</h3>
+            <div style="height:200px; position:relative;">
+              <svg viewBox="0 0 600 200" preserveAspectRatio="none" style="width:100%;height:100%;">
+                <defs>
+                  <linearGradient id="ra" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#1F3868" stop-opacity=".25"/>
+                    <stop offset="100%" stop-color="#1F3868" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <!-- grid lines -->
+                <g stroke="#E2E7EF" stroke-width="1">
+                  <line x1="0" y1="40" x2="600" y2="40"/>
+                  <line x1="0" y1="90" x2="600" y2="90"/>
+                  <line x1="0" y1="140" x2="600" y2="140"/>
+                </g>
+                <!-- line -->
+                <path d="M40,150 L140,140 L240,120 L340,100 L440,80 L540,40 L540,180 L40,180 Z" fill="url(#ra)"/>
+                <path d="M40,150 L140,140 L240,120 L340,100 L440,80 L540,40" stroke="#0A1A35" stroke-width="2.5" fill="none"/>
+                <g fill="#0A1A35">
+                  <circle cx="40" cy="150" r="3.5"/><circle cx="140" cy="140" r="3.5"/><circle cx="240" cy="120" r="3.5"/>
+                  <circle cx="340" cy="100" r="3.5"/><circle cx="440" cy="80" r="3.5"/><circle cx="540" cy="40" r="4.5" stroke="#fff" stroke-width="2"/>
+                </g>
+                <!-- labels -->
+                <g fill="#6B7793" font-size="10" font-family="Inter">
+                  <text x="40" y="195" text-anchor="middle">11월</text>
+                  <text x="140" y="195" text-anchor="middle">12월</text>
+                  <text x="240" y="195" text-anchor="middle">01월</text>
+                  <text x="340" y="195" text-anchor="middle">02월</text>
+                  <text x="440" y="195" text-anchor="middle">03월</text>
+                  <text x="540" y="195" text-anchor="middle">04월</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Funnel -->
+          <div class="panel">
+            <h3>매출 흐름 (퍼널)</h3>
+            <div class="funnel">
+              <div class="funnel__row"><span class="funnel__label">광고 노출</span><div class="funnel__bar"><div class="funnel__fill" style="width:100%;"></div></div><span class="funnel__n">100%</span></div>
+              <div class="funnel__row"><span class="funnel__label">홈페이지 유입</span><div class="funnel__bar"><div class="funnel__fill" style="width:52%;"></div></div><span class="funnel__n">52%</span></div>
+              <div class="funnel__row"><span class="funnel__label">상담 문의</span><div class="funnel__bar"><div class="funnel__fill" style="width:28%;"></div></div><span class="funnel__n">28%</span></div>
+              <div class="funnel__row"><span class="funnel__label">상담 완료</span><div class="funnel__bar"><div class="funnel__fill" style="width:21%;"></div></div><span class="funnel__n">21%</span></div>
+              <div class="funnel__row"><span class="funnel__label">내원 전환</span><div class="funnel__bar"><div class="funnel__fill" style="width:15%;"></div></div><span class="funnel__n">15%</span></div>
+              <div class="funnel__row"><span class="funnel__label">재방문</span><div class="funnel__bar"><div class="funnel__fill" style="width:6%;"></div></div><span class="funnel__n">6%</span></div>
+            </div>
+          </div>
+
+          <!-- Channel table -->
+          <div class="panel">
+            <h3>채널별 매출 기여도</h3>
+            <table style="width:100%; border-collapse:collapse; font-size:13px;">
+              <thead>
+                <tr style="text-align:left; color:var(--grey-500); border-bottom: 1px solid var(--line);">
+                  <th style="padding:10px 0; font-weight:500;">채널</th>
+                  <th style="font-weight:500;">광고비 비중</th>
+                  <th style="font-weight:500;">신환 기여</th>
+                  <th style="font-weight:500;">매출 기여</th>
+                  <th style="font-weight:500;">ROI</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <td style="padding:12px 0;">Naver 검색</td>
+                  <td>34%</td><td>41%</td><td>46%</td>
+                  <td style="color:var(--positive); font-weight:600;">1.35</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <td style="padding:12px 0;">Google 검색</td>
+                  <td>18%</td><td>23%</td><td>22%</td>
+                  <td style="color:var(--positive); font-weight:600;">1.22</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <td style="padding:12px 0;">Naver 플레이스</td>
+                  <td>11%</td><td>16%</td><td>15%</td>
+                  <td style="color:var(--positive); font-weight:600;">1.36</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <td style="padding:12px 0;">Instagram</td>
+                  <td>22%</td><td>14%</td><td>12%</td>
+                  <td style="color:var(--critical); font-weight:600;">0.55</td>
+                </tr>
+                <tr>
+                  <td style="padding:12px 0;">기타 매체</td>
+                  <td>15%</td><td>6%</td><td>5%</td>
+                  <td style="color:var(--critical); font-weight:600;">0.33</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Right: bottleneck + next action -->
+        <div style="display:grid; gap:14px; align-content:start;">
+          <div class="panel">
+            <h3>병목 구간</h3>
+            <div class="bottleneck">
+              <strong>상담 문의 → 상담 완료:</strong> 25% 이탈. 첫 응대 평균 12분 → 환자 이탈 패턴 식별.
+            </div>
+            <div class="bottleneck" style="margin-top:10px;">
+              <strong>재방문률 -2.1%p:</strong> 4월 첫 주 알림 시퀀스 일부 누락 확인.
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>이번 달 개선 작업</h3>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li style="display:flex; gap:10px; padding:8px 0; border-bottom:1px solid var(--line); font-size:13px;">
+                <span style="color:var(--positive);">✓</span>
+                <span>홈페이지 진입 시 신뢰 요소 상단 정렬</span>
+              </li>
+              <li style="display:flex; gap:10px; padding:8px 0; border-bottom:1px solid var(--line); font-size:13px;">
+                <span style="color:var(--positive);">✓</span>
+                <span>전환 매체(Naver 검색)에 광고비 +6%p 재배분</span>
+              </li>
+              <li style="display:flex; gap:10px; padding:8px 0; font-size:13px;">
+                <span style="color:var(--positive);">✓</span>
+                <span>플레이스 리뷰 응대 자동 알림 도입</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="next-action">
+            <h3>NEXT ACTION — 05월</h3>
+            <ol>
+              <li>상담 응대 핸드오프 흐름 1단계 단축 (목표: 평균 12분 → 7분)</li>
+              <li>재방문 알림 시퀀스 D+14·D+45 두 단계 추가</li>
+              <li>Instagram 광고비 비중 22% → 12% 재조정, 검색·플레이스로 이전</li>
+            </ol>
+          </div>
+
+          <div class="panel" style="background: var(--grey-50); border-color:transparent;">
+            <h3 style="color:var(--grey-700);">담당자 코멘트</h3>
+            <p style="font-size:13px; line-height:1.7; margin:0; color:var(--grey-700);">
+              상담 응대 흐름 1단계만 줄여도 상담 완료율 +5%p 이상 회복이 예상됩니다.
+              5월에는 알림 시퀀스 보완으로 재방문률 회복까지 함께 진행합니다.
+            </p>
+            <div style="margin-top:14px; font-size:12px; color:var(--grey-500);">— Mediond 운영팀</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHY THIS REPORT ==================== -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">WHY THIS REPORT</p>
+      <h2>이 리포트가 다른 점.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <h3>1. 노출·클릭이 아닌<br/>매출 기여 흐름</h3>
+        <p>광고 성과가 아니라 매출이 만들어지는 흐름을 봅니다. 매체별 ROI까지 분해합니다.</p>
+      </div>
+      <div class="card reveal">
+        <h3>2. 병목 구간을<br/>분명하게 식별</h3>
+        <p>잘 된 곳보다 ‘어디서 새고 있는지’를 우선합니다. 문제를 숨기지 않습니다.</p>
+      </div>
+      <div class="card reveal">
+        <h3>3. 다음 액션이<br/>명시되어 있음</h3>
+        <p>“잘 되고 있습니다”가 아닌, ‘다음 달에 무엇을 바꿀지’를 함께 정합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA ==================== -->
+<section>
+  <div class="container">
+    <div class="cta reveal">
+      <div>
+        <h2>이런 리포트를<br/>우리 병원에서 받아보고 싶다면.</h2>
+        <p>첫 매출 구조 진단 리포트는 무료입니다.</p>
+      </div>
+      <a href="contact.html" class="btn btn--primary">무료 매출 구조 진단 신청 <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div class="foot__brand">
+        <a class="brand brand--lg" href="index.html">
+          <img class="brand__logo" src="웹로고-가로.png" alt="Mediond 메디온드" />
+        </a>
+        <p style="margin-top:18px;">Medical + Beyond.<br/>광고 대행이 아닌, 병원의 매출 시스템을 설계하는 B2B 메디컬 성장 브랜드.</p>
+      </div>
+      <div><h5>Mediond</h5><ul><li><a href="about.html">회사 소개</a></li><li><a href="service.html">서비스</a></li><li><a href="report.html">리포트 샘플</a></li><li><a href="contact.html">문의</a></li></ul></div>
+      <div><h5>Services</h5><ul><li><a href="service.html#diagnosis">매출 구조 진단</a></li><li><a href="service.html#acquisition">유입 설계</a></li><li><a href="service.html#conversion">전환 설계</a></li><li><a href="service.html#retention">재방문 관리</a></li></ul></div>
+      <div><h5>Contact</h5><ul><li>contact@mediond.kr</li><li>평일 10:00 – 19:00</li></ul></div>
+    </div>
+    <div class="foot__legal">
+      <span>© Mediond. Hospital Revenue Operating System.</span>
+      <span>개인정보처리방침 · 이용약관</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
